@@ -1,0 +1,28 @@
+.header{
+    height: 80px;
+    font-size: 1.3rem;
+}
+.bg-image{
+   height: 700px;
+}
+.bg-footer{
+    background-color:rgb(207, 188, 192);
+}
+.btn{
+    background-color: rgb(186, 85, 104);
+    color: #fff6f6;
+}
+.btn:hover{
+    background-color: rgb(239, 122, 141);
+     color: hsl(0, 0%, 100%);
+     transform: scale(1.1);
+}
+.nav-link:hover{
+     transform: scale(1.1);
+}
+.banner{
+    height:30vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
