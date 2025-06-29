@@ -5,7 +5,6 @@ const Movies = () => {
     const [movies, setMovies] = useState([])
     useEffect(()=>{
         axios.get("http://localhost:3000/movies").then((resp) => {
-             console.log(resp.data);
           setMovies(resp.data.data)
         })
     }, [])

@@ -12,24 +12,23 @@ const [movie, setMovie] = useState(null)
         axios.get(`http://localhost:3000/movies/${id}`).then((resp) => {
             setMovie(resp.data.data)
         })
-     }, [])
+     }, [id])
        const goBack = (event) => {
         event.preventDefault();
         navigate(-1);
     }
-    
 return(
    <main>
-    {movie && movie.image &&(
+    {movie &&(
         <section>
             <img src={movie.image} className="banner" alt="" />
+             <a className="btn m-4" href="#" onClick={goBack}>
+             Torna indietro
+          </a>
         </section>
     ) } 
     {movie && (
-        <section className="container">
-                 <a className="btn" href="#" onClick={goBack}>
-             Torna indietro
-          </a>
+        <section className="container single-movie-details">
             <h1 className="text-center my-4">{movie.title} - {movie.director}</h1>
              <p className="text-center">{movie.abstract}</p>
         </section>
