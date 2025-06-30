@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const AppHeader =() => {
     const HeaderLinks = [
@@ -12,9 +12,10 @@ const AppHeader =() => {
         }
     ]
     return (
-        <header>
+        <header className="sticky-top">
             <nav className="navbar navbar-expand-lg bg-body-tertiary bg-dark header px-5"  data-bs-theme="dark">
   <div className="container-fluid">
+    <Link className="navbar-brand fs-4" href="#">My movies</Link>
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
       <ul className="navbar-nav">
         {HeaderLinks.map((curLink, index) => (

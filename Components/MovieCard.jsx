@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 const MovieCard = ({movie}) => {
-    const {id, title, director, genre, release_year, abstract, image} = movie
+    const {slug, title, director, genre, release_year, abstract, image} = movie
 return (
     <div className="card h-100">
   <img src={image || "https://placehold.co/334x334?text=No+image"} className="card-img-top" alt={`Immagine di ${title}`}/>
@@ -9,7 +9,7 @@ return (
     <h5>{genre}</h5>
     <h6>{release_year}</h6>
     <p className="card-text">{abstract}</p>
-    <Link to={`/movies/${id}`}  className="btn my-2">Dettagli film</Link>
+    <Link to={`/movies/${slug}`}  className="btn my-2">Dettagli film</Link>
   </div>
 </div>
 )

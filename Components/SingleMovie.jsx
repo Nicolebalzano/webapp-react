@@ -5,14 +5,14 @@ import { useState } from "react";
 
 const SingleMovie = () => {
     const navigate = useNavigate();
-     const {id} = useParams();
+     const {slug} = useParams();
 const [movie, setMovie] = useState(null)
   
      useEffect(()=> {
-        axios.get(`http://localhost:3000/movies/${id}`).then((resp) => {
+        axios.get(`http://localhost:3000/movies/${slug}`).then((resp) => {
             setMovie(resp.data.data)
         })
-     }, [id])
+     }, [slug])
        const goBack = (event) => {
         event.preventDefault();
         navigate(-1);
