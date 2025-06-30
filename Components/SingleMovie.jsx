@@ -35,7 +35,7 @@ return(
         <section className="container">
             <h2>Recensioni</h2>
             {movie.reviews.length === 0 ? (
-                <div className="alert alert-info"> 
+                <div className="alert alert-warning"> 
                 Nessuna recensione per il momento
                 </div>
             ) : (<div className="row row-cols-1 g-3 m-5">

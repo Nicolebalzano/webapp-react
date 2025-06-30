@@ -21,10 +21,13 @@
      transform: scale(1.1);
 }
 .banner{
-    height:50vh;
+    height:70vh;
     width: 100%;
-    object-fit:cover;
+    object-fit:contain;
     object-position: center;
+  padding: 50px;
+    background-color: rgb(35, 31, 31);
+box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
 }
 .single-movie-details{
 margin-top: 50px;
